@@ -1,0 +1,25 @@
+{
+  "name": "student_scholarrship",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://monirulHaque:%40Mht03636@github.com/monirulHaque/student_scholarship.git"
+  },
+  "author": "Monirul and Mehedi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monirulHaque/student_scholarship/issues"
+  },
+  "homepage": "https://github.com/monirulHaque/student_scholarship#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.2",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
