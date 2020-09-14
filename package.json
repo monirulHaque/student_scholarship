@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/monirulHaque/student_scholarship#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.2",
     "ejs": "^3.1.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "util": "^0.12.3"
   }
 }
