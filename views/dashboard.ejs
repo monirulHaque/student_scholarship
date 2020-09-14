@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css">
-    <title>Hello Students</title>
+    <title>Dashboard</title>
 </head>
 <body>
 	<div class="container">
@@ -13,7 +13,7 @@
             <div class="col-sm">
                 <div class="card">
                     <div class="card-header">
-                        Personal Informations
+                        <b>Personal Informations</b>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title"><b>Name: </b><%=name%></h5>
@@ -28,7 +28,7 @@
                         </p>
                         <div class="collapse" id="collapseExample">
                             <div class="card card-body">
-                                <form>
+                                <form action="/dashboard" method="POST">
                                     <div class="form-group row mb-0">
                                         <label for="staticName" class="col-sm-2 col-form-label">Name:</label>
                                         <div class="col-sm-10">
@@ -38,22 +38,22 @@
                                     <div class="form-group row mb-2">
                                         <label for="staticid" class="col-sm-2 col-form-label">ID:</label>
                                         <div class="col-sm-10">
-                                            <input type="text" readonly class="form-control-plaintext" id="staticid" value="<%=studentId%>">
+                                            <input type="text" readonly class="form-control-plaintext" id="staticid" name="studentId" value="<%=studentId%>">
                                         </div>
                                     </div>
                                     <div class="form-group row mb-2">
                                         <label for="changeEmail" class="col-sm-2 col-form-label">Email:</label>
                                         <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="changeEmail">
+                                            <input type="email" class="form-control" id="changeEmail" name="email">
                                         </div>
                                     </div>
                                     <div class="form-group row mb-2">
                                         <label for="changeEmail" class="col-sm-2 col-form-label">Phone:</label>
                                         <div class="col-sm-10">
-                                            <input type="text" style="appearance: none;" class="form-control" id="changeEmail">
+                                            <input type="text" style="appearance: none;" class="form-control" id="changeEmail" name="phone">
                                         </div>
                                     </div>
-                                    <a href="#" class="btn btn-dark mt-2">Save</a>
+                                    <button class="btn btn-dark mt-2" type="submit">Save</button>
                                 </form>
                             </div>
                         </div>
@@ -63,16 +63,13 @@
             <div class="col-sm">
 				<div class="card">
                     <div class="card-header">
-                        Scholarship Informations
+                        <b>Scholarship Informations</b>
                     </div>
+					
                     <div class="card-body">
-                        <p class="card-text"><b>Summer 2020: </b>Pending</p>
-                        <p class="card-text"><b>Spring 2020: </b>Approved</p>
-                        <p class="card-text"><b>Fall 2019: </b>Approved</p>
-                        <p class="card-text"><b>Summer 2019: </b>Rejected</p>
-                        <p class="card-text"><b>Spring 2019: </b>N/A</p>
-                        <p class="card-text"><b>Fall 2018: </b>N/A</p>
-                        <p class="card-text"><b>Summer 2018: </b>N/A</p>
+						<%for (var i=0; i<semesterName.length; i++){ %>
+                        <p class="card-text"><b><%=semesterName[i]%><%=semesterYear[i]%>: </b><%=scholarshipStatus[i]%></p>
+						<% } %>
                     </div>
                 </div>
             </div>
