@@ -31,15 +31,10 @@ app.post('/', (req, res, next) => {
                 console.log("Login sucksexful");
                 var name, email, phone, currentStatus;
                 studentId = result[0].studentId;
-				// studentIdGlobal = result[0].studentId;
                 name = result[0].name;
-				// nameGlobal = result[0].name;
                 email = result[0].email;
-				// emailGlobal = result[0].email;
                 phone = result[0].phone;
-				// phoneGlobal = result[0].phone;
                 currentStatus = result[0].currentStatus;
-				// currentStatusGlobal = result[0].currentStatus;
 
 				pool.query(sql1, [studentId, pass], (err, result) => {
 					if (err) throw err;
@@ -48,10 +43,7 @@ app.post('/', (req, res, next) => {
 							var semesterName = [], semesterYear = [], scholarshipStatus = [];
 							for(var i=0; i<result.length; i++){
 								semesterName.push(result[i].semesterName);
-								semesterName.push(result[i].semesterName);
 								semesterYear.push(result[i].semesterYear);
-								semesterYear.push(result[i].semesterYear);
-								scholarshipStatus.push(result[i].scholarshipStatus);
 								scholarshipStatus.push(result[i].scholarshipStatus);
 							}
 							res.render('dashboard', { studentId: studentId, name: name, email: email, phone: phone, currentStatus: currentStatus, semesterName: semesterName, semesterYear: semesterYear, scholarshipStatus: scholarshipStatus});
@@ -104,10 +96,7 @@ app.post('/dashboard', (req, res, next) => {
 							var semesterName = [], semesterYear = [], scholarshipStatus = [];
 							for(var i=0; i<result.length; i++){
 								semesterName.push(result[i].semesterName);
-								semesterName.push(result[i].semesterName);
 								semesterYear.push(result[i].semesterYear);
-								semesterYear.push(result[i].semesterYear);
-								scholarshipStatus.push(result[i].scholarshipStatus);
 								scholarshipStatus.push(result[i].scholarshipStatus);
 							}
 							res.render('dashboard', { studentId: studentId, name: name, email: email, phone: phone, currentStatus: currentStatus, semesterName: semesterName, semesterYear: semesterYear, scholarshipStatus: scholarshipStatus});
