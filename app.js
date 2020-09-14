@@ -14,15 +14,32 @@ app.use(express.static("src"));
 
 
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
  	res.render('index');
 });
 
+app.post('/', (req, res, next) => {
+	var studentId = req.body.studentId;
+	var pass = req.body.password;
+	
+	let sql = "SELECT * FROM students WHERE studentId = ? and pass = ?";
+		
+	pool.query(sql, [studentId, pass], (err, result) => {
+		if (err) throw err;
+		else{
+			if(result.length>0) {
+				console.log("Login sucksexful");
+				res.render('dashboard');
+        	}else {
+            	 res.send("WTF, wrong hole!");
+			}
+		}
+	});
 
-
-
-
-
+});
+app.get('/dashboard', (req, res) => {
+ 	res.render('dashboard');
+});
 
 
 
@@ -40,6 +57,6 @@ app.use((err,req,res,next) => {
 	res.send(err.message);
 });
 
-app.listen(3000, function(){
+app.listen(3000, () => {
 	console.log("Server is running on 3000");
 });

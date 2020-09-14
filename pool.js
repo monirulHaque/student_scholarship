@@ -5,7 +5,7 @@ const connection = mysql.createConnection ({
 	//connectionLimit: 10,
 	host: 'localhost',
 	user: 'root',
-	password: '',
+	password: 'adminpass',
 	//password : process.env.MYSQL_PW,
 	database: 'students'
 });
