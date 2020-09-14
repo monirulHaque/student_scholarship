@@ -25,7 +25,6 @@ create table scholarship(
 
 
 
-
 INSERT INTO student(studentId, name, email, phone, pass, currentStatus)
 VALUES(12345678, "testuser", "testuser@test.com", 12345678910, "test12", "APPROVED");
 
