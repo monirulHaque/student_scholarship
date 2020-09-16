@@ -28,7 +28,7 @@ app.post('/', (req, res, next) => {
         if (err) throw err;
         else {
             if (result.length > 0) {
-                console.log("Login sucksexful");
+                console.log("Login successful");
                 var name, email, phone, currentStatus;
                 studentId = result[0].studentId;
                 name = result[0].name;
@@ -54,7 +54,7 @@ app.post('/', (req, res, next) => {
 				});
 
             } else {
-                res.send("WTF, wrong hole!");
+                res.send("<h1>Sorry wrong credentials</h1>");
             }
         }
     });
@@ -82,7 +82,6 @@ app.post('/dashboard', (req, res, next) => {
         if (err) throw err;
         else {
             if (result.length > 0) {
-                console.log("Login sucksexful");
                 var name, email, phone, currentStatus;
                 name = result[0].name;
                 email = result[0].email;

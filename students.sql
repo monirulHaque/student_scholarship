@@ -32,7 +32,10 @@ INSERT INTO student(studentId, name, email, phone, pass, currentStatus)
 VALUES(18300000, "Farah Farhin", "farahfarhin@gmail.com", 01234567890, "farhin", "PENDING");
 
 INSERT INTO student(studentId, name, email, phone, pass, currentStatus)
-VALUES(18301296, "Farhin Oishi", "farhinoishi@yahoo.com", 01851792387, "oishi231", "PENDING");
+VALUES(18101296, "Farhin Oishi", "farhinoishi@yahoo.com", 01851792387, "oishi231", "PENDING");
+
+INSERT INTO student(studentId, name, email, phone, pass, currentStatus)
+VALUES(19301237, "Walter White", "wwhite@hotmail.com", 01791421287, "imdanger", "Rejected");
 
 INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
 VALUES(2,"Summer", 2018, "N/A", 12345678);
@@ -65,18 +68,28 @@ INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatu
 VALUES(2,"Summer", 2020, "Pending", 18300000);
 
 INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
-VALUES(2,"Summer", 2018, "N/A", 18301296);
+VALUES(2,"Summer", 2018, "N/A", 18101296);
 INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
-VALUES(3,"Fall", 2018, "Rejected", 18301296);
+VALUES(3,"Fall", 2018, "Rejected", 18101296);
 INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
-VALUES(1,"Spring", 2019, "Approved", 18301296);
+VALUES(1,"Spring", 2019, "Approved", 18101296);
 INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
-VALUES(2,"Summer", 2019, "Approved", 18301296);
+VALUES(2,"Summer", 2019, "Approved", 18101296);
 INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
-VALUES(3,"Fall", 2019, "Approved", 18301296);
+VALUES(3,"Fall", 2019, "Approved", 18101296);
 INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
-VALUES(1,"Spring", 2020, "Rejected", 18301296);
+VALUES(1,"Spring", 2020, "Rejected", 18101296);
 INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
-VALUES(2,"Summer", 2020, "Pending", 18301296);
+VALUES(2,"Summer", 2020, "Pending", 18101296);
+
+
+INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
+VALUES(1,"Spring", 2020, "Rejected", 19301237);
+INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
+VALUES(3,"Fall", 2019, "Rejected", 19301237);
+INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
+VALUES(2,"Summer", 2020, "Rejected", 19301237);
+INSERT INTO scholarship(semesterId, semesterName, semesterYear, scholarshipStatus, studentId)
+VALUES(2,"Summer", 2019, "N/A", 19301237);
 
 
